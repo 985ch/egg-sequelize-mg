@@ -1,6 +1,6 @@
 {
 	"name": "egg-sequelize-mg",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "A customizable sequelize model generation tool for egg-sequelize",
 	"license": "MIT",
 	"repository": "985ch/egg-sequelize-mg",
