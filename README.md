@@ -66,7 +66,7 @@ const tables = {
 }
 
 // Output files to the target directory using a simple format
-generator.generate(config, tables, path.join(__dirname, '../app/'), generator.readMysql);
+generator.generate(config, tables, path.join(__dirname, '../app/'), { mysql: generator.readMysql });
 ```
 If you want to see more examples, please see [here](./test.js). If you want to configure your own file format, please go to [sequelize-mg](https://github.com/985ch/sequelize-mg)
 

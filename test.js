@@ -35,7 +35,7 @@ const tables = {
 };
 
 (async function() {
-  await generator.generate(config, tables, './sample/test1/', generator.readMysql);
+  await generator.generate(config, tables, './sample/test1/', { mysql: generator.readMysql });
   await generator.generate(config, tables, './sample/test2/');
   await generator.generate(config.datasources[0], [ 'users' ], './sample/test3/');
 })();

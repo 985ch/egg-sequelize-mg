@@ -65,7 +65,7 @@ const tables = {
 }
 
 // 使用简易格式输出文件到指定目录
-generator.generate(config, tables, path.join(__dirname, '../app/'), generator.readMysql);
+generator.generate(config, tables, path.join(__dirname, '../app/'), { mysql: generator.readMysql });
 ```
 如果你想看更多的使用例子请看[这里](./test.js)，如果你想要配置自己的文件格式请移步[sequelize-mg](https://github.com/985ch/sequelize-mg)
 
