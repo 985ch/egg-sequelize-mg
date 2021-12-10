@@ -4,11 +4,14 @@ const sequelizeGen = require('sequelize-mg');
 
 const { readMysql } = require('./lib/readmysql');
 const sachikawaMysql = require('./lib/sachikawa-mysql');
-const readDefault = require('./lib/readdefault');
 const { defaultConfig } = require('./lib/config');
 
 async function generate(config, tables, appRoot = './', readers) {
-  if (!readers)readers = { all: readDefault };
+  if (!readers) {
+    readers = {
+      all: require('./lib/readdefault'),
+    };
+  }
   let total = { ignore: 0, update: 0, create: 0 };
   const ignoreList = [];
   if (!config.datasources) {
